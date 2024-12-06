@@ -35,8 +35,8 @@ const FooterModul = (props) => {
           </div>
           <div className="footer-feedback-form-box margin-box">
             <div className="footer-feedback-form-box-input">
-              <label>Ваше имя *</label>
-              <input placeholder="Например, Иван Петров" />
+              <label>Телефон *</label>
+              <input placeholder="+7 (___)-___-__-__" />
             </div>
           </div>
           <div className="footer-feedback-form-btn">ОТПРАВИТЬ</div>
