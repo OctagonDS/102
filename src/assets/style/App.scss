@@ -1,0 +1,19 @@
+@use '../fonts/stylesheet.scss';
+@use './module/header.scss';
+@use './module/main.scss';
+@use './module/footer.scss';
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Google Sans';
+  min-width: 1366px;
+}

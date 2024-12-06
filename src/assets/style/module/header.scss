@@ -1,0 +1,141 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    height: 142px;
+    margin: 33px 120px;
+    @media (max-width: 1600px) {
+      margin: 33px 60px;
+    }
+
+    &-logo {
+      display: flex;
+      align-items: center;
+      gap: 45px;
+
+      & div {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        letter-spacing: 3px;
+        font-size: 24px;
+        @media (max-width: 1600px) {
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 1600px) {
+        & img {
+          width: 315px;
+        }
+      }
+    }
+
+    &-menu {
+      display: flex;
+      align-items: center;
+      gap: 78px;
+      font-size: 30px;
+      @media (max-width: 1600px) {
+        font-size: 20px;
+      }
+
+      & span {
+        cursor: pointer;
+        transition: all 0.4s;
+
+        &:hover {
+          color: #c85bd5;
+        }
+      }
+    }
+
+    &-prev {
+      height: 845px;
+      position: relative;
+      margin: 0 0 77px 120px;
+      display: flex;
+      align-items: center;
+
+      @media (max-width: 1600px) {
+        height: 620px;
+        margin: 0 0 77px 60px;
+      }
+
+      &-action {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        &-text {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          font-size: 99px;
+          font-weight: 700;
+
+          @media (max-width: 1600px) {
+            font-size: 58px;
+          }
+
+          &-color {
+            color: #c85bd5;
+          }
+        }
+
+        &-btn {
+          width: 320px;
+          padding: 20px 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 36px;
+          color: #fff;
+          background: rgb(185, 141, 206);
+          background-image: linear-gradient(
+            to right,
+            rgba(185, 141, 206, 1) 0%,
+            rgba(200, 91, 213, 1) 50%,
+            rgba(185, 141, 206, 1) 100%
+          );
+          background-size: 200% auto;
+          border-radius: 50px;
+          cursor: pointer;
+          transition: all 0.4s ease-in-out;
+
+          @media (max-width: 1600px) {
+            width: 220px;
+            font-size: 26px;
+            padding: 15px 0;
+          }
+
+          &:hover {
+            background-position: right center;
+          }
+        }
+      }
+
+      & img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        @media (max-width: 1600px) {
+          width: 85%;
+        }
+      }
+
+      &-line {
+        height: 4px;
+        background: #1e275e;
+        width: 100vw;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+}
