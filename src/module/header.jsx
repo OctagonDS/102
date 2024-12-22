@@ -1,5 +1,5 @@
 import logo from '../assets/img/logo.png'
-import topBack from '../assets/img/top-back.png'
+import topBack from '../assets/img/top-back-diamond.png'
 
 const HeaderModul = (props) => {
   const { aboutRef, scrollToAbout, scrollToCourse, scrollToContact, ...rest } =
