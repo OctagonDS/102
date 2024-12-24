@@ -1,3 +1,5 @@
+import { useRef } from 'react'
+import axios from 'axios'
 import logo2 from '../assets/img/logo2.png'
 import PhoneSvg from '../assets/img/icon/phone'
 import WhatsappSvg from '../assets/img/icon/whatsapp'
@@ -6,6 +8,25 @@ import ArrowSvg from '../assets/img/icon/arrow'
 
 const FooterModul = (props) => {
   const { ...rest } = props
+  const refName = useRef(null)
+  const refPhone = useRef(null)
+
+  const sendForm = async () => {
+    const data = {
+      email: 'accountas@mail.ru',
+      name: refName.current.value,
+      phone: refPhone.current.value,
+    }
+
+    await axios
+      .post(`http://127.0.0.1:8000/send`, data)
+      .then(async (res) => {
+        console.log(res)
+      })
+      .catch((e) => {
+        console.log(e)
+      })
+  }
 
   const ScrollUp = () => {
     window.scrollTo(0, 0)
@@ -30,16 +51,18 @@ const FooterModul = (props) => {
           <div className="footer-feedback-form-box">
             <div className="footer-feedback-form-box-input">
               <label>Ваше имя *</label>
-              <input placeholder="Например, Иван Петров" />
+              <input ref={refName} placeholder="Например, Иван Петров" />
             </div>
           </div>
           <div className="footer-feedback-form-box margin-box">
             <div className="footer-feedback-form-box-input">
               <label>Телефон *</label>
-              <input placeholder="+7 (___)-___-__-__" />
+              <input ref={refPhone} placeholder="+7 (___)-___-__-__" />
             </div>
           </div>
-          <div className="footer-feedback-form-btn">ОТПРАВИТЬ</div>
+          <div className="footer-feedback-form-btn" onClick={() => sendForm()}>
+            ОТПРАВИТЬ
+          </div>
         </div>
       </div>
       <div className="footer-menu">
