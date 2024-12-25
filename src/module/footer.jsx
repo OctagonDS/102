@@ -19,7 +19,7 @@ const FooterModul = (props) => {
     }
 
     await axios
-      .post(`http://127.0.0.1:8000/send`, data)
+      .post(`https://admin.102grani.ru/send`, data)
       .then(async (res) => {
         console.log(res)
       })
